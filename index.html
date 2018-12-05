@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number Guesser</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1><span class="title-bold">Number</span> <span class="title-thin">Guesser</span></h1>
+      <h2>Ultimate Challenger Edition</h2>
+    </header>
+    <div class="content">
+      <section class="left-side">
+        <fieldset class="card1">
+          <form>
+            <h3>Set Range</h3>
+            <label for="min-range">Min Range</label><br />
+            <input type="Number" name="min-range" value="min-range"><br />
+            <label for="max-range">Max Range</label><br />
+            <input type="Number" name="max-range" value="max-range"><br />
+            <input type="button" class="button-update" value="Update">
+          </form>
+        </fieldset>
+        <fieldset class="card2">
+          <form>
+            <p>The Current Range is <span class="first-num">1</span> to <span class="last-num">100</span></p>
+            <h3>Challenger 1</h3>
+            <label for="name1">Name</label><br />
+            <input type="name" name="name1"><br />
+            <label for="guess1">Guess</label><br />
+            <input type="Number" name="guess1">
+            <h3>Challenger 2</h3>
+            <label for="name2">Name</label><br />
+            <input type="name" name="name2"><br />
+            <label for="guess2">Guess</label><br />
+            <input type="Number" name="guess2">
+            <br />
+            <input type="button" class="submit-guess" value="Submit Guess">
+            <input type="button" class="reset-game" value="Reset Game">
+            <input type="button" class="clear-game" value="Clear Game">
+          </form>
+        </fieldset>
+        <fieldset class="card3">
+          <section class="score1">
+            <h3>Latest Score</h3>
+            <h4>Challenger 1 Name</h4>
+            <p>current guess</p>
+          </section>
+          <section class="score2">
+            <h3>Latest Score</h3>
+            <h4>Challenger 2 Name</h4>
+            <p>current guess</p>
+          </section>
+        </fieldset>
+      </section>
+      <section class="right-side">
+        <div class="names">
+          <span class="chall1">Challenger 1 Name</span> vs <span class="chall2">Challenger 2 Name</span>
+        </div>
+        <div class="winner-text">Winner</div>
+        <div class="stats">
+          <span class="guesses">#</span> Guesses <br />
+          <span class="minutes">$</span> Minutes
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

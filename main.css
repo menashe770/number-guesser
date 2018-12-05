@@ -1,0 +1,36 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  background-color: #404041;
+  padding: 15px;
+}
+
+h1 {
+  color: #DD1972
+}
+
+h2 {
+  color: #FFF
+}
+
+.content {
+  width: 100%;
+  display: flex;
+}
+
+.left-side {
+  background-color: #F7F7F7
+}
+
+header,
+.button-update,
+.submit-guess,
+.reset-game,
+.clear-game,
+.right-side {
+    text-transform: uppercase;
+}
