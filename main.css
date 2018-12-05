@@ -26,6 +26,14 @@ h2 {
   background-color: #F7F7F7
 }
 
+.min-range-box{
+  display: block;
+}
+.max-range-box{
+  display: block;
+}
+
+
 header,
 .button-update,
 .submit-guess,
@@ -33,4 +41,20 @@ header,
 .clear-game,
 .right-side {
     text-transform: uppercase;
+}
+
+.button-update,
+.submit-guess,
+.reset-game,
+.clear-game {
+  border-radius: 10px;
+  color: #FFF;
+
+}
+
+.card1,
+.card2,
+.card3,
+.names {
+  background-color: #FFF
 }

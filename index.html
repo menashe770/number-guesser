@@ -11,14 +11,18 @@
       <h2>Ultimate Challenger Edition</h2>
     </header>
     <div class="content">
-      <section class="left-side">
+      <div class="left-side">
         <fieldset class="card1">
+          <h3>Set Range</h3>
           <form>
-            <h3>Set Range</h3>
-            <label for="min-range">Min Range</label><br />
-            <input type="Number" name="min-range" value="min-range"><br />
-            <label for="max-range">Max Range</label><br />
-            <input type="Number" name="max-range" value="max-range"><br />
+            <div class="min-range-box">
+              <p>Min Range</p>
+              <input type="number" name="min-range" value="min-range">
+            </div>
+            <div class="max-range-box" > 
+              <p>Max Range</p>
+              <input type="number" name="max-range" value="max-range">
+            </div>
             <input type="button" class="button-update" value="Update">
           </form>
         </fieldset>
@@ -26,14 +30,14 @@
           <form>
             <p>The Current Range is <span class="first-num">1</span> to <span class="last-num">100</span></p>
             <h3>Challenger 1</h3>
-            <label for="name1">Name</label><br />
+            <p>Name</p>
             <input type="name" name="name1"><br />
-            <label for="guess1">Guess</label><br />
+            <p>Guess</p>
             <input type="Number" name="guess1">
             <h3>Challenger 2</h3>
-            <label for="name2">Name</label><br />
+            <p>Name</p>
             <input type="name" name="name2"><br />
-            <label for="guess2">Guess</label><br />
+            <p>Guess</p>
             <input type="Number" name="guess2">
             <br />
             <input type="button" class="submit-guess" value="Submit Guess">
@@ -53,7 +57,7 @@
             <p>current guess</p>
           </section>
         </fieldset>
-      </section>
+      </div>
       <section class="right-side">
         <div class="names">
           <span class="chall1">Challenger 1 Name</span> vs <span class="chall2">Challenger 2 Name</span>
@@ -64,8 +68,6 @@
           <span class="minutes">$</span> Minutes
         </div>
       </section>
-      <input> 
-      <input>
     </div>
   </body>
 </html>
