@@ -1,6 +1,7 @@
 * {
   font-family: 'Open Sans', sans-serif;
-  margin: auto;
+  margin: 0;
+  padding:0;
 }
 
 header {
@@ -23,7 +24,8 @@ h2 {
 }
 
 .left-side {
-  background-color: #F7F7F7
+  background-color: #F7F7F7;
+  width: 50%;
 }
 
 header,
@@ -34,3 +36,40 @@ header,
 .right-side {
     text-transform: uppercase;
 }
+
+.range-box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button{
+  display: flex;
+  align-items: flex-end;
+}
+
+.card1{
+  padding:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
