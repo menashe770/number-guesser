@@ -83,6 +83,18 @@ button{
     margin-top: 20px;
 }
 
+.score-box-main{
+  display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+/*.score-box-main h1{
+      font-size: 80px;
+}*/
+
+
+
 
 
 
