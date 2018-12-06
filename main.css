@@ -89,9 +89,23 @@ button{
     margin-top: 15px;
 }
 
-/*.score-box-main h1{
+.score-box-main h1{
       font-size: 80px;
-}*/
+}
+
+.score h3{
+  text-align: center;
+}
+
+.score p{
+  text-align: center;
+}
+
+.score h1{
+  text-align:center;
+}
+
+
 
 
 
