@@ -18,14 +18,14 @@
             <div class="range-box">
               <form class="min-range-box">
                 <p>Min Range</p>
-                <input type="Number" name="min-range" value="min-range">
+                <input class="min-range-input" type="number" name="min-range" value="min-range">
               </form>
               <form class="min-range-box">
-                <p>Min Range</p>
-                <input type="Number" name="min-range" value="min-range">
+                <p>Max Range</p>
+                <input class="max-range-input" type="Number" name="min-range" value="min-range">
               </form>
               <form class="button">
-                <button>Update</button>
+                <button class="update-button">Update</button>
               </form>
           </div>
             
@@ -41,48 +41,49 @@
 
                 <div class="player-name-input">
                   <p>Name</p>
-                  <input type="name" name="name1">
+                  <input class="player-one-name" type="name" name="name1">
                 </div>
                 <div class="player-guess-input">
                   <p>Guess</p>
-                  <input type="Number" name="guess1">
+                  <input class="player-one-guess" type="Number" name="guess1">
                 </div>
               </div>
               <h3>Challenger 2</h3>
               <div class="player-one">
                 <div class="player-name-input">
                   <p>Name</p>
-                  <input type="name" name="name1">
+                  <input class="player-two-name" type="name" name="name1">
                 </div>
                 <div class="player-guess-input">
                   <p>Guess</p>
-                  <input type="Number" name="guess1">
+                  <input class="player-two-guess" type="Number" name="guess1">
                 </div>
               </div>
           </div>
           <div class="buttons">
-            <button>Submit Guess</button>
+            <button class="submit-button">Submit Guess</button>
             <button>Reset Game</button>
-            <button>Clear Game</button>
+            <button class="clear-button">Clear Game</button>
           </div>
         </article>
         <article class="card card3">
           <h1>Latest Score</h1>
           <div class="score-box-main">
             <div class="player-one-score score">
-              <h3 >Challenger one name</h3>
+              <h3 class="player-one-name-display">Challenger one name</h3>
               <div class="score-box">
                 <p>Current Guess</p>
-                <h1>25</h1>
-                <p>that's too high</p>
+                <h1 class="player-one-guess-display">25</h1>
+                <p class="player-one-guess-comment">that's too high</p>
               </div>
             </div>
+            <hr width="1" size="200">
             <div class="player-two-score score">
-              <h3>Challenger two name</h3>
+              <h3 class="player-two-name-display">Challenger two name</h3>
               <div class="score-box">
                 <p>Current Guess</p>
-                <h1>25</h1>
-                <p>that's too high</p>
+                <h1 class="player-two-guess-display">25</h1>
+                <p class="player-two-guess-comment">that's too high</p>
               </div>
             </div>
           </div>
@@ -90,27 +91,14 @@
 
           </section>
           <section class="right-side">
-            <article class="card result-card">
-              <div class="player-names"><h1>Challenger1 <span>vs</span> Challenger2</h1></div>
-              <hr>
-              <div class="winner-name">
-                  <div>
-                    <h1>Challenger2 Name</h1>
-                    <p class="winner">Winner</p>
-                </div>
-              </div>
-
-                <hr>
-              <div class="result-count">
-                <p>23 Guesses</p>
-                <p>0.5 minutes</p>
-                <button>X</button>
-              </div>
-            </article>
+            
+            
           </section>
 
           
             </div>
     </div>
+    <script src="main.js"></script>
   </body>
+  
 </html>
