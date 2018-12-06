@@ -12,7 +12,7 @@
     </header>
     <div class="content">
       <section class="left-side">
-        <article class="card1">
+        <article class=" card card1">
           
             <h3>Set Range</h3>
             <div class="range-box">
@@ -33,25 +33,38 @@
             
           
         </article>
-        <fieldset class="card2">
-          <form>
+        
+          <div class="card card2">
             <p>The Current Range is <span class="first-num">1</span> to <span class="last-num">100</span></p>
-            <h3>Challenger 1</h3>
-            <label for="name1">Name</label><br />
-            <input type="name" name="name1"><br />
-            <label for="guess1">Guess</label><br />
-            <input type="Number" name="guess1">
-            <h3>Challenger 2</h3>
-            <label for="name2">Name</label><br />
-            <input type="name" name="name2"><br />
-            <label for="guess2">Guess</label><br />
-            <input type="Number" name="guess2">
-            <br />
+            <div class="guess-input">
+              <h3>Challenger 1</h3>
+              <div class="player-one">
+                <div class="player-name-input">
+                  <p>Name</p>
+                  <input type="name" name="name1">
+                </div>
+                <div class="player-guess-input">
+                  <p>Guess</p>
+                  <input type="Number" name="guess1">
+                </div>
+              </div>
+              <h3>Challenger 2</h3>
+              <div class="player-one">
+                <div class="player-name-input">
+                  <p>Name</p>
+                  <input type="name" name="name1">
+                </div>
+                <div class="player-guess-input">
+                  <p>Guess</p>
+                  <input type="Number" name="guess1">
+                </div>
+              </div>
+          </div>
             <input type="button" class="submit-guess" value="Submit Guess">
             <input type="button" class="reset-game" value="Reset Game">
             <input type="button" class="clear-game" value="Clear Game">
-          </form>
-        </fieldset>
+          
+        
         <fieldset class="card3">
           <section class="score1">
             <h3>Latest Score</h3>
