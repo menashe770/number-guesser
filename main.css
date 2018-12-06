@@ -65,6 +65,8 @@ button{
     border-radius: 50px;
     padding-right: 30px;
     padding-left: 30px;
+    background-color:grey;
+    color:#ffff;
 }
 
 .player-name-input{
@@ -104,6 +106,34 @@ button{
 .score h1{
   text-align:center;
 }
+
+.right-side{
+  width:47%;
+}
+
+.result-count{
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-names h1{
+  text-align: center;
+}
+
+.winner-name{
+  
+  height:150px;
+}
+
+.winner-name h1{
+  text-align: center;
+}
+
+.winner{
+  text-align: center;
+}
+
+
 
 
 
