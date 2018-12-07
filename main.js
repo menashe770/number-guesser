@@ -33,9 +33,12 @@ submit.addEventListener('click', function(e){
           } if(playerOneGuess.value == randomNumber){
               playerOneGuessComment.innerText = "Boom!!";
               appendCard(e);
+              getWinner();
+              
           } if(playerTwoGuess.value == randomNumber){
               playerTwoGuessComment.innerText = "Boom!!";
               appendCard(e);
+              getWinner();
           }
         	
           playerOneNameDisplay.innerText = playerOneName.value;
@@ -71,7 +74,7 @@ function appendCard(e){
               <hr>
               <div class="winner-name">
                   <div>
-                    <h1>${playerOneName.value}</h1>
+                    <h1 class="winner-player-name"></h1>
                     <p class="winner">Winner</p>
                 </div>
               </div>
@@ -96,6 +99,14 @@ function deleteCard() {
 
 }
  
+}
+
+function getWinner(){
+  if(playerOneGuess.value == randomNumber){
+    document.querySelector('.winner-player-name').innerHTML = playerOneName.value;
+  } else if(playerTwoGuess.value == randomNumber){
+    document.querySelector('.winner-player-name').innerHTML = playerTwoName.value;
+  }
 }
 
 
