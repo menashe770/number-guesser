@@ -35,7 +35,7 @@ submit.addEventListener('click', function(e){
               appendCard(e);
               getWinner();
               
-          } if(playerTwoGuess.value == randomNumber){
+          } else if(playerTwoGuess.value == randomNumber){
               playerTwoGuessComment.innerText = "Boom!!";
               appendCard(e);
               getWinner();
