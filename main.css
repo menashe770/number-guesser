@@ -151,11 +151,22 @@ button:disabled {
   padding:10px;
 }
 
+svg{
+  width: 18px;
+  margin-right: 10px;
+}
+
+.error-img{
+  display: flex;
+
+}
+
+
 
 @media only screen and (max-width: 1250px) {
-  .right-side{
+  /*.right-side{
     display: none;
-  }
+  }*/
   .range-box{
     display: flex;
     flex-direction: column;
@@ -185,7 +196,7 @@ button:disabled {
     flex-direction: column;
     margin-top:15px;
   }
-  
+
 
   button{
     margin-top:10px;
@@ -196,6 +207,7 @@ button:disabled {
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
     
   }
