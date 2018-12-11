@@ -117,6 +117,7 @@ button:disabled {
 
 .right-side{
   width:47%;
+  
 }
 
 .result-count{
@@ -149,6 +150,93 @@ button:disabled {
 
 .right-side{
   padding:10px;
+}
+
+svg{
+  width: 18px;
+  margin-right: 10px;
+}
+
+.error-img{
+  display: flex;
+
+}
+
+
+
+.min-error-display{
+  display:none;
+  color:red;
+}
+
+.max-error-display{
+  display:none;
+}
+
+.player-one-error-display{
+  display: none;
+}
+
+.player-two-error-display{
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 1250px) {
+  /*.right-side{
+    display: none;
+  }*/
+  .range-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .min-range-input{
+    width:100%;
+  }
+  .max-range-input{
+    width:100%;
+  }
+  .update-button{
+    width:50%;
+    margin-top: 10px;
+  }
+  .player-one{
+    display: flex;
+    flex-direction: column;
+  }
+  .player-one-guess{
+    width:100%;
+  }
+  .player-two-guess{
+    width:100%;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top:15px;
+  }
+
+
+  button{
+    margin-top:10px;
+    padding:10px;
+  }
+
+  .content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+  }
+
+  .score-box-main{
+    display: flex;
+    flex-direction: column;
+  }
+  
 }
 
 
