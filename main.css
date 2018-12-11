@@ -21,6 +21,8 @@ h2 {
 .content {
   width: 100%;
   display: flex;
+  position: relative;
+        /*z-index: 1;*/
 }
 
 .left-side {
@@ -224,6 +226,7 @@ svg{
   }
 
   .content{
+
     display:flex;
     justify-content: center;
     align-items: center;
@@ -238,6 +241,31 @@ svg{
   }
   
 }
+
+
+/*confetti code*/
+
+/*body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}*/
+
+.canvas {
+  position: absolute;
+  opacity: 2;
+  bottom: -200px;
+  left: 0;
+  width: 100%;
+    /*z-index: 9;*/
+}
+
+/*.canvas-one{
+  display: none;
+}
+*/
+
 
 
 
