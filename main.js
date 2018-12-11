@@ -38,50 +38,31 @@ for (var i=0; i<disableButton.length;i++){
 
 submit.addEventListener('click', function(e){
         	e.preventDefault();
-          if(playerOneGuess.value < randomNumber){
-            playerOneGuessComment.innerText = "Thats too low";
-          } else if(playerOneGuess.value > randomNumber){
-            playerOneGuessComment.innerText = "Thats too high"} 
-            else{
-            playerOneGuessComment.innerText = "Boom!!";
-            appendCard();
-            getWinner();
-          }
-          if(playerTwoGuess.value < randomNumber){
-            playerTwoGuessComment.innerText = "Thats too low";
-          } else if(playerTwoGuess.value > randomNumber){
-            playerTwoGuessComment.innerText = "Thats too high"} 
-            else{
-            playerTwoGuessComment.innerText = "Boom!!";
-            appendCard();
-            getWinner();
-          }
+          playerOneGuessEval();
+          playerTwoGuessEval();
           disableButton[1].disabled = false;
           disableButton[2].disabled = false;
 
-
-          
-        	
           playerOneNameDisplay.innerText = playerOneName.value;
           playerTwoNameDisplay.innerText = playerTwoName.value;
           playerOneGuessDisplay.innerText = playerOneGuess.value;
           playerTwoGuessDisplay.innerText = playerTwoGuess.value;
+
           randomNumberFunction();
           errorDisplay();
-
           
-          
-
-
-
+          playerTwoNameErrorDIsplay();
 });
+
 
 updateButton.addEventListener('click', function(e){
   e.preventDefault();
-  minNumber.innerText = minRange.value;
-  maxNumber.innerText = maxRange.value;
-  randomNumber = randomNumberFunction();
-  console.log(randomNumber);
+          minNumber.innerText = minRange.value;
+          maxNumber.innerText = maxRange.value;
+          randomNumber = randomNumberFunction();
+          console.log(randomNumber);
+          minErrorDisplay();
+          maxErrorDisplay();
   
 
 })
@@ -147,6 +128,8 @@ function randomNumberFunction() {
   return randomNumberGenerator;
 };
 
+
+
 function errorDisplay(){
   if(playerOneGuess.value === "" || playerTwoGuess.value === ""){
             var element = document.querySelectorAll('.error-display');
@@ -159,6 +142,80 @@ function errorDisplay(){
 
           }
 };
+
+
+function minErrorDisplay(){
+  if(minRange.value === ""){
+    document.querySelector('.min-error-display').classList.remove('min-error-display');
+    
+    minRange.style.border = "1px solid red";
+    alert('hey');
+  }
+}
+
+function maxErrorDisplay(){
+  if(maxRange.value === ""){
+    document.querySelector('.max-error-display').classList.remove('max-error-display');
+    
+    maxRange.style.border = "1px solid red";
+    alert('hey');
+  }
+}
+
+function playerOneNameErrorDIsplay(){
+  if(playerOneName.value === ""){
+    document.querySelector('.player-one-error-display').classList.remove('player-one-error-display');
+    playerOneNameDisplay.innerText = playerOneName.value;
+    playerOneName.style.border = "1px solid red";
+    playerOneGuess.style.border = "1px solid red";
+  }
+};
+
+function playerTwoNameErrorDIsplay(){
+  if(playerTwoName.value === ""){
+    document.querySelector('.player-two-error-display').classList.remove('player-two-error-display');
+    
+    playerTwoName.style.border = "1px solid red";
+    playerTwoGuess.style.border = "1px solid red";
+  }
+};
+
+
+function playerOneGuessEval(){
+  if(playerOneGuess.value < randomNumber){
+            playerOneGuessComment.innerText = "Thats too low";
+          } else if(playerOneGuess.value > randomNumber){
+            playerOneGuessComment.innerText = "Thats too high"}
+            else if(playerOneGuess.value === ""){
+            playerOneGuessDisplay.innerText = "balh";
+            playerOneNameErrorDIsplay();
+            }
+            else{
+            playerOneGuessComment.innerText = "Boom!!";
+            appendCard();
+            getWinner();
+          };
+
+}
+
+function playerTwoGuessEval(){
+            if(playerTwoGuess.value < randomNumber){
+            playerTwoGuessComment.innerText = "Thats too low";
+          } else if(playerTwoGuess.value > randomNumber){
+            playerTwoGuessComment.innerText = "Thats too high"}
+            else if(playerTwoGuess.value === ""){
+              
+             playerOneNameErrorDIsplay(); 
+            }
+            else{
+            playerTwoGuessComment.innerText = "Boom!!";
+            appendCard();
+            getWinner();
+          }
+}
+
+
+
 
 
 

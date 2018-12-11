@@ -117,6 +117,7 @@ button:disabled {
 
 .right-side{
   width:47%;
+  
 }
 
 .result-count{
@@ -159,6 +160,25 @@ svg{
 .error-img{
   display: flex;
 
+}
+
+
+
+.min-error-display{
+  display:none;
+  color:red;
+}
+
+.max-error-display{
+  display:none;
+}
+
+.player-one-error-display{
+  display: none;
+}
+
+.player-two-error-display{
+  display: none;
 }
 
 
