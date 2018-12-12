@@ -27,10 +27,10 @@ var errorMessage = document.querySelector('.error-img');
 var randomNumber = randomNumberFunction();
 
 
-for (var i=0; i<disableButton.length;i++){
+
   disableButton[1].disabled = true;
   disableButton[2].disabled = true;
-}
+
 
 
 
@@ -100,8 +100,8 @@ function appendCard(){
                 <p>0.5 minutes</p>
                 <button class="delete-button">X</button>
               </div>
-            </article>` 
-            rightSide.innerHTML += card;
+            </article>`; 
+            rightSide.insertAdjacentHTML('afterbegin', card);
 }
 
 rightSide.addEventListener('click', deleteCard)
@@ -135,7 +135,7 @@ function randomNumberFunction() {
 
 
 function errorDisplay(){
-  if(playerOneGuess.value === "" || playerTwoGuess.value === ""){
+  if(parseInt(playerOneGuess.value) === '' || parseInt(playerTwoGuess.value) === ''){
             var element = document.querySelectorAll('.error-display');
             for(var i=0; i<element.length;i++){
             element[i].classList.remove('error-display');}
@@ -167,57 +167,54 @@ function maxErrorDisplay(){
 }
 
 function playerOneNameErrorDIsplay(){
-  if(playerOneName.value === ""){
+  
     document.querySelector('.player-one-error-display').classList.remove('player-one-error-display');
-    playerOneNameDisplay.innerText = playerOneName.value;
+    // playerOneNameDisplay.innerText = playerOneName.value;
     playerOneName.style.border = "1px solid red";
     playerOneGuess.style.border = "1px solid red";
-  }
+  
 };
 
 function playerTwoNameErrorDIsplay(){
-  if(playerTwoName.value === ""){
+  
     document.querySelector('.player-two-error-display').classList.remove('player-two-error-display');
-    
+    // playerTwoNameDisplay.innerText = playerTwoName.value;
     playerTwoName.style.border = "1px solid red";
     playerTwoGuess.style.border = "1px solid red";
-  }
+  
 };
 
 
 function playerOneGuessEval(){
-  if(playerOneGuess.value < randomNumber){
-            playerOneGuessComment.innerText = "Thats too low";
-          } else if(playerOneGuess.value > randomNumber){
-            playerOneGuessComment.innerText = "Thats too high"}
-            else if(playerOneGuess.value === ""){
-            playerOneGuessDisplay.innerText = "balh";
-            playerOneNameErrorDIsplay();
-            }
-            else{
-            playerOneGuessComment.innerText = "Boom!!";
-            appendCard();
-            getWinner();
-            document.querySelector('.canvas-one').classList.remove('canvas-one');
-          };
-
+  if (parseInt(playerOneGuess.value) === randomNumber){
+    playerOneGuessComment.innerText = "Boom!!";
+    appendCard();
+    getWinner();
+    confs = new Array(confNum).fill().map(_ => new Confetti());
+    document.querySelector('.canvas-one').classList.remove('canvas-one');
+  }else if(parseInt(playerOneGuess.value) > randomNumber){
+    playerOneGuessComment.innerText = "Thats too high";
+  }else if (parseInt(playerOneGuess.value) < randomNumber){
+    playerOneGuessComment.innerText = "Thats too low";
+  }else{
+    playerOneNameErrorDIsplay();
+  }
 }
 
 function playerTwoGuessEval(){
-            if(playerTwoGuess.value < randomNumber){
-            playerTwoGuessComment.innerText = "Thats too low";
-          } else if(playerTwoGuess.value > randomNumber){
-            playerTwoGuessComment.innerText = "Thats too high"}
-            else if(playerTwoGuess.value === ""){
-              
-             playerOneNameErrorDIsplay(); 
-            }
-            else{
-            playerTwoGuessComment.innerText = "Boom!!";
-            appendCard();
-            getWinner();
-            document.querySelector('.canvas-one').classList.remove('canvas-one');
-          }
+  if(parseInt(playerTwoGuess.value) === randomNumber){
+    playerTwoGuessComment.innerText = "Boom!!";
+    appendCard();
+    getWinner();
+     confs = new Array(confNum).fill().map(_ => new Confetti());
+    document.querySelector('.canvas-one').classList.remove('canvas-one');
+  } else if(parseInt(playerTwoGuess.value) > randomNumber){
+    playerTwoGuessComment.innerText = "Thats too high";
+  }else if(parseInt(playerTwoGuess.value) < randomNumber){
+    playerTwoGuessComment.innerText = "Thats too low";
+  }else{
+    playerTwoNameErrorDIsplay();
+  } 
 }
 
 
@@ -285,9 +282,9 @@ Confetti.prototype.draw = function() {
   ctx.fill();
 };
 
-const ctx = canvasEl.getContext('2d');
-const confNum = Math.floor(w / 3);
-const confs = new Array(confNum).fill().map(_ => new Confetti());
+var ctx = canvasEl.getContext('2d');
+var confNum = Math.floor(w / 3);
+var confs = new Array(confNum).fill().map(_ => new Confetti());
 
 loop();
 
@@ -295,7 +292,7 @@ loop();
 document.querySelector('.canvas').addEventListener('click',function removeConfetti(event){
   event.preventDefault();
   if(event.target.classList.contains('canvas')){
-    event.target.remove();
+    event.target.classList.add('canvas-one');
     
   }
 });
