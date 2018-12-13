@@ -216,7 +216,10 @@ svg{
     flex-direction: column;
     margin-top:15px;
   }
-
+  hr {
+    transform: rotate(90deg);
+    margin: 0 auto;
+  }
 
   button{
     margin-top:10px;
