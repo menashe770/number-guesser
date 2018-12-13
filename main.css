@@ -1,7 +1,7 @@
 * {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  padding:0;
+  padding: 0;
 }
 
 header {
@@ -11,11 +11,11 @@ header {
 }
 
 h1 {
-  color: #DD1972
+  color: #DD1972;
 }
 
 h2 {
-  color: #FFF
+  color: #FFF;
 }
 
 .content {
@@ -35,211 +35,181 @@ header,
 .reset-game,
 .clear-game,
 .right-side {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
-.range-box{
+.range-box {
   display: flex;
   justify-content: space-between;
 }
 
-.button{
+.button {
   display: flex;
   align-items: flex-end;
 }
 
-.card{
-  padding:15px;
+.card {
+  padding: 15px;
   border: 2px solid grey;
   margin: 15px;
 }
 
-input{
-
-    height: 30px;
-    font-size: 20px;
+input {
+  height: 30px;
+  font-size: 20px;
 }
 
-button{
+button {
   font-size: 20px;
   border-radius: 50px;
   padding-right: 30px;
   padding-left: 30px;
-  background-color:grey;
-  color:#ffff;
+  background-color: grey;
+  color: #FFF;
 }
 
-button:hover{
+button:hover {
   background-color: #DD1972;
 }
 
 button:disabled {
-    background-color:#CCC;
+  background-color: #CCC;
 }
 
-.player-name-input{
-      display: flex;
-    flex-direction: column;
-}
-
-.player-one{
-      display: flex;
-    justify-content: space-between;
-}
-
-.buttons{
+.player-name-input {
   display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  flex-direction: column;
 }
 
-.score-box-main{
+.player-one {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.score-box-main {
   display: flex;
   justify-content: space-around;
   margin-top: 15px;
 }
 
-.score-box-main h1{
-      font-size: 80px;
+.score-box-main h1 {
+  font-size: 80px;
 }
 
-.score h3{
+.score h3,
+.winner,
+.score h1,
+.score p {
   text-align: center;
 }
 
-.score p{
-  text-align: center;
+.right-side {
+  width: 47%;
 }
 
-.score h1{
-  text-align:center;
-}
-
-.right-side{
-  width:47%;
-  
-}
-
-.result-count{
+.result-count {
   display: flex;
   justify-content: space-between;
 }
 
-.player-names h1{
+.player-names h1 {
   text-align: center;
-  color:grey;
-
+  color: grey;
 }
 
-.winner-name{
+.winner-name {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:150px;
+  height: 150px;
 }
 
-.winner-name h1{
+.winner-name h1 {
   text-align: center;
   font-size: 40px;
-  color:grey;
+  color: grey;
 }
 
-.winner{
-  text-align: center;
+.right-side {
+  padding: 10px;
 }
 
-.right-side{
-  padding:10px;
-}
-
-svg{
+svg {
   width: 18px;
   margin-right: 10px;
 }
 
-.error-img{
+.error-img {
   display: flex;
-
 }
 
-
-
-.min-error-display{
-  display:none;
-  color:red;
+.min-error-display {
+  display: none;
+  color: red;
 }
 
-.max-error-display{
-  display:none;
-}
-
-.player-one-error-display{
+.max-error-display,
+.player-one-error-display,
+.player-two-error-display {
   display: none;
 }
-
-.player-two-error-display{
-  display: none;
-}
-
-
 
 @media only screen and (max-width: 1250px) {
-  /*.right-side{
-    display: none;
-  }*/
-  .range-box{
+  .range-box {
     display: flex;
     flex-direction: column;
   }
-  .min-range-input{
-    width:100%;
+
+  .min-range-input,
+  .max-range-input,
+  .player-one-guess,
+  .player-two-guess {
+    width: 100%;
   }
-  .max-range-input{
-    width:100%;
-  }
-  .update-button{
-    width:50%;
+
+  .update-button {
+    width: 50%;
     margin-top: 10px;
   }
-  .player-one{
+
+  .player-one {
     display: flex;
     flex-direction: column;
   }
-  .player-one-guess{
-    width:100%;
-  }
-  .player-two-guess{
-    width:100%;
-  }
-  .buttons{
+
+  .buttons {
     display: flex;
     flex-direction: column;
-    margin-top:15px;
+    margin-top: 15px;
   }
+
   hr {
     transform: rotate(90deg);
     margin: 0 auto;
   }
 
-  button{
-    margin-top:10px;
-    padding:10px;
+  button {
+    margin-top: 10px;
+    padding: 10px;
   }
 
-  .content{
-    display:flex;
+  .content {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
-    
   }
 
-  .score-box-main{
+  .score-box-main {
     display: flex;
     flex-direction: column;
   }
-  
 }
 
 
